@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="total">
+      <div class="form-login">
+        <div class="data">
+          <ul class="list">
+            <!-- Add with Fetch -->
+          </ul>
+        </div>
+        <div class="top">
+          <div>
+            <h1><a href="../index.html">Signup</a></h1>
+          </div>
+          <div class="form-login1">
+            <h3>Login</h3>
+            <input
+              type="text"
+              class="inputLogin"
+              placeholder="Emaill address"
+            />
+            <input type="password" class="inputLogin" placeholder="Password" />
+            <a href="" class="fgPass">forgot password</a>
+            <button class="login">Login</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let _btn = document.querySelectorAll("button");
+    let _inps = document.querySelectorAll("input");
+    let _fgPass = document.getElementsByClassName("fgPass")[0];
+
+    let allInps = [];
+    _btn[0].addEventListener("click", () => {
+      console.log(_btn[0]);
+      _inps.forEach((val) => {
+        if (val.value != "") {
+          val.style.border = "1px solid green";
+          allInps.push(val.value);
+        } else {
+          val.style.border = "1px solid red";
+          alert("اطلاعات را درست وارد کنید ");
+        }
+
+        if (allInps.length == _inps.length) {
+          fetch("https://64bebda85ee688b6250cdf59.mockapi.io/api/v1/users", {
+            method: "GET",
+            headers: { "content-type": "application/json" },
+          })
+            .then((res) => {
+              if (res.ok) {
+                return res.json();
+              }
+              // handle error
+            })
+            .then((tasks) => {
+              const tasksData = [];
+
+              tasks.map((val) => {
+                if (val.email == allInps[0] && val.pass == allInps[1]) {
+                  tasksData.push(val.email + " " + val.pass);
+                }
+              });
+
+              if (tasksData.length == 0) {
+                location.assign("../../assets/../index.html");
+              } else {
+                location.assign("index-dashbord.html");
+              }
+              // Do something with the list of tasks
+            })
+            .catch((error) => {
+              // handle error
+            });
+        }
+      });
+    });
+
+    //
+    let _account = document.getElementsByClassName("list")[0];
+
+    fetch("https://64bebda85ee688b6250cdf59.mockapi.io/api/v1/users", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        // handle error
+      })
+      .then((tasks) => {
+        console.log(tasks);
+        tasks.map((val, i) => {
+          let _div = document.createElement("div");
+          _div.innerHTML = `
+  <div>
+      <li>Email${i + 1}: ${val.email}</li>
+              <li>password${i}: ${val.pass}</li>
+      </div>
+  `;
+          _account.appendChild(_div);
+        });
+
+        // Do something with the list of tasks
+      })
+      .catch((error) => {
+        // handle error
+      });
+  </script>
+</html>

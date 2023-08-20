@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 100vh;
+}
+main .container {
+  width: 600px;
+  height: 100vh;
+  background-color: rgb(64, 112, 244);
+  position: relative;
+  border-radius: 30px;
+}
+main .container > .login-div {
+  position: fixed;
+  background-color: #fff;
+  width: 600px;
+  height: 90px;
+  bottom: 0;
+  -webkit-clip-path: ellipse(51% 80% at 50% 80%);
+          clip-path: ellipse(51% 80% at 50% 80%);
+}
+main .container > .login-div > a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: rgb(133, 133, 133);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  font-size: 40px;
+}
+main .container > h2 {
+  color: #fff;
+  font-size: 50px;
+  margin: 30px 0px;
+}
+main .container input {
+  width: 85%;
+  height: 70px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 30px;
+  font-size: 20px;
+}
+main .container input::-moz-placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+main .container input:-ms-input-placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+main .container input::placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+main .container input:focus {
+  outline: none !important;
+  border: none;
+}
+main .container .check {
+  display: flex;
+  align-items: center;
+  line-height: 60px;
+  margin-top: 25px;
+  accent-color: white;
+}
+main .container .check input {
+  height: 25px;
+  width: 10%;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+main .container .check input:checked {
+  background-color: red !important;
+}
+main .container .check p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+main .container > button {
+  width: 85%;
+  height: 70px;
+  border-radius: 10px;
+  border: none;
+  font-size: 25px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.total .form-login {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 250px;
+}
+.total .form-login .top {
+  width: 600px;
+  position: relative;
+}
+.total .form-login .top > div {
+  position: absolute;
+  width: 100%;
+}
+.total .form-login .top > div > h1 > a {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  line-height: 150px;
+  color: #fff;
+  font-size: 50px;
+  justify-content: center;
+  background-color: rgb(64, 112, 244);
+  text-decoration: none;
+}
+.total .form-login .top .form-login1 {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(90% at 49% 100%);
+          clip-path: circle(90% at 49% 100%);
+  background-color: #fff;
+  box-shadow: 1px 1px 7px 7px gray;
+  display: flex;
+  align-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.total .form-login .top .form-login1 > * {
+  width: 80%;
+  height: 60px;
+}
+.total .form-login .top .form-login1 h3 {
+  margin-top: 50px;
+  color: rgba(128, 128, 128, 0.813);
+  font-size: 40px;
+  font-weight: 400;
+}
+.total .form-login .top .form-login1 input {
+  height: 70px;
+  margin-top: 25px;
+  border-radius: 10px;
+  padding-left: 30px;
+  font-size: 20px;
+  outline: none;
+}
+.total .form-login .top .form-login1 input::-moz-placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+.total .form-login .top .form-login1 input:-ms-input-placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+.total .form-login .top .form-login1 input::placeholder {
+  font-size: 25px;
+  padding-left: 20px;
+}
+.total .form-login .top .form-login1 > a {
+  text-align: left;
+  text-decoration: none;
+  color: gray;
+  font-size: 20px;
+}
+.total .form-login .top .form-login1 > a:hover {
+  text-decoration: underline;
+}
+.total .form-login .top .form-login1 > button {
+  width: 85%;
+  height: 70px;
+  border-radius: 10px;
+  border: none;
+  font-size: 30px;
+  background-color: rgb(64, 112, 244);
+  color: #fff;
+  cursor: pointer;
+}
+.total .form-login .top .form-login1 > button:hover {
+  background-color: rgba(64, 112, 244, 0.677);
+}
+.total .form-login .data {
+  background-color: rgb(231, 141, 231);
+  height: 500px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.total .form-login .data > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.total .form-login .data > ul div {
+  width: 100%;
+  display: flex;
+  gap: 200px;
+}
+.total .form-login .data > ul div > li {
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */
