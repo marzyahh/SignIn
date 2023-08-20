@@ -200,9 +200,9 @@ main .container > button {
   background-color: rgb(231, 141, 231);
   height: 500px;
   width: 600px;
+  min-width: 200px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 100px;
 }
 .total .form-login .data > ul {
   list-style: none;
@@ -213,8 +213,7 @@ main .container > button {
 .total .form-login .data > ul div {
   width: 100%;
   display: flex;
-  gap: 200px;
 }
 .total .form-login .data > ul div > li {
-  font-size: 30px;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

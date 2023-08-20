@@ -195,9 +195,9 @@ main {
       background-color: rgb(231, 141, 231);
       height: 500px;
       width: 600px;
+      min-width: 200px;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 100px;
       > ul {
         list-style: none;
         display: flex;
@@ -206,9 +206,8 @@ main {
         div {
           width: 100%;
           display: flex;
-          gap: 200px;
           > li {
-            font-size: 30px;
+            font-size: 20px;
           }
         }
       }
